@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WellnessProductHub | Premium Wellness After 45</title>
+
+<meta name="description" content="Premium wellness products designed to support your energy, vitality, and long-term health after 45.">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --green-dark: #163024;
+  --green-main: #4B7920;
+  --bg-soft: #f8f6f2;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--green-dark);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo img {
+  width: 28px;
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* MENU */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  padding: 40px 20px;
+  transition: 0.3s;
+}
+
+.menu a {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  color: var(--green-dark);
+  font-weight: 500;
+}
+
+.menu.open {
+  right: 0;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background: linear-gradient(to right, #eef5f2, #ffffff);
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.tagline {
+  color: var(--green-main);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* CTA */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--green-dark);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0f2218;
+}
+
+/* IMAGE */
+.hero img {
+  width: 480px;
+  border-radius: 12px;
+}
+
+/* TRUST BAR */
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background: var(--bg-soft);
+  font-size: 14px;
+}
+
+.trust span {
+  font-weight: 600;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.feature {
+  max-width: 220px;
+  text-align: center;
+}
+
+.feature img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* EMAIL SECTION (MELHORADA) */
+.email-section {
+  background: var(--green-dark);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.email-section h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.email-section p {
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.email-form input {
+  padding: 12px;
+  width: 260px;
+  border: none;
+  border-radius: 6px;
+}
+
+.email-form button {
+  padding: 12px 20px;
+  border: none;
+  background: var(--green-main);
+  color: white;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #fafafa;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .email-form button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <img src="logo.png">
+    WellnessProductHub
+  </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-text">
+    <div class="tagline">Trusted Wellness For Adults 45+</div>
+
+    <h1>Feel Stronger, Healthier, and More Energized Every Day</h1>
+
+    <p>Premium wellness solutions designed to support your vitality, balance, and long-term health.</p>
+
+    <a href="#" class="btn">Explore Products</a>
+  </div>
+
+  <img src="hero.jpg">
+
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <span>✔ Science-Based</span>
+  <span>✔ Premium Quality</span>
+  <span>✔ Trusted by Thousands</span>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+
+  <div class="feature">
+    <img src="icon1.png">
+    <h4>Natural Ingredients</h4>
+    <p>Carefully selected for safety and effectiveness.</p>
+  </div>
+
+  <div class="feature">
+    <img src="icon2.png">
+    <h4>Proven Results</h4>
+    <p>Backed by research and customer success.</p>
+  </div>
+
+  <div class="feature">
+    <img src="icon3.png">
+    <h4>Daily Vitality</h4>
+    <p>Support your energy and overall well-being.</p>
+  </div>
+
+</section>
+
+<!-- EMAIL -->
+<section class="email-section">
+
+  <h3>Get Your Free Wellness Guide</h3>
+  <p>Join thousands improving their health naturally.</p>
+
+  <form class="email-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button>Get Free Guide</button>
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 WellnessProductHub</p>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
